@@ -235,14 +235,10 @@ sun.shadow.camera.updateProjectionMatrix();
 
 scene.add(sun);
 
-const shadowHelper = new THREE.CameraHelper(sun.shadow.camera);
-scene.add(shadowHelper);
-const helper = new THREE.DirectionalLightHelper(sun, 5);
-scene.add(helper);
-
 // ambient
 const light = new THREE.AmbientLight(0x404040, 3); // soft white light
 scene.add(light);
+scene.background = new THREE.Color(0x145a1d);
 
 // ORTHGRAPHIC
 const aspect = sizes.width / sizes.height;
